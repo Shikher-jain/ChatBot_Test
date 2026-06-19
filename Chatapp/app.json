@@ -1,0 +1,37 @@
+{
+  "name": "Advanced Chat App",
+  "description": "Real-time chat application with voice/video calls and file sharing",
+  "repository": "https://github.com/yourusername/advanced-chat-app",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "socket.io", "chat", "webrtc"],
+  "env": {
+    "JWT_SECRET": {
+      "description": "A secret key for JWT token signing",
+      "generator": "secret"
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB connection string",
+      "value": "mongodb+srv://username:password@cluster.mongodb.net/chatapp"
+    },
+    "NODE_ENV": {
+      "description": "Environment",
+      "value": "production"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [
+    {
+      "plan": "mongolab:sandbox"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+} 
